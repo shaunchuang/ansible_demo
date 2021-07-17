@@ -1,16 +1,16 @@
 ---
   - name: pip install test
     hosts: webservers
-	become: yes
-    
-	- name: upgrade pip
-	  pip:
-	    name: pip
-		extra_args: --upgrade
-		excutable: pip3
+    become: yes
+    tasks:
+     - name: upgrade pip
+        pip:
+          name: pip
+          extra_args: --upgrade
+          excutable: pip3
 
-	- name: Install bs4 python package
-	  pip:
-	    name: beautifulsoup4
-		excutable: pip3
+     - name: Install bs4 python package
+        pip:
+          name: beautifulsoup4
+          excutable: pip3
 		
