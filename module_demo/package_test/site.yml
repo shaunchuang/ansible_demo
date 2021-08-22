@@ -1,0 +1,12 @@
+---
+  - name: install packages by yum
+    hosts: hadoop1
+    become: yes
+    
+    tasks:
+      - name: install the httpd
+          yum: 
+            name: httpd
+            state: present
+            
+    
