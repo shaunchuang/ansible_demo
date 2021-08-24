@@ -39,6 +39,7 @@ group_vars/ instance-group name: like webiste, devel, mylab ...
 hosts_vars/ instance name: like dbserver1, webserver1...
 
 ###### ansible directory hierarchy
+```
   ansible-init
   ↳-- ansible.cfg
   ↳-- group_vars
@@ -47,7 +48,7 @@ hosts_vars/ instance name: like dbserver1, webserver1...
   ⇃   ↳-- mwebsite
   ↳-- host_vars
   ⇃   ↳-- dbserver1
-
+```
 
 
 ## Ansible-vault encrypts variables and files
