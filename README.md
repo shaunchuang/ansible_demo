@@ -39,14 +39,14 @@ group_vars/ instance-group name: like webiste, devel, mylab ...
 hosts_vars/ instance name: like dbserver1, webserver1...
 
 ###### ansible directory hierarchy
-ansible-init
-↳-- ansible.cfg
-↳-- group_vars
-⇃   ↳-- devel
-⇃   ↳-- mylab
-⇃   ↳-- mwebsite
-↳-- host_vars
-⇃   ↳-- dbserver1
+  ansible-init
+  ↳-- ansible.cfg
+  ↳-- group_vars
+  ⇃   ↳-- devel
+  ⇃   ↳-- mylab
+  ⇃   ↳-- mwebsite
+  ↳-- host_vars
+  ⇃   ↳-- dbserver1
 
 
 
@@ -84,6 +84,7 @@ gather_facts: no  disable setup module
 
 ###### debug module
 show ansible_facts variables
+```
 ---
   - name: list my managed hosts facts
     hosts: website
@@ -92,7 +93,7 @@ show ansible_facts variables
       - name: list managed hosts facts
         debug:
           var: ansible_facts
-          
+```
 ansible_facts['hostname']
 ansible_facts['fqdn']
 ansible_facts['defalut_ipv4']['address']
