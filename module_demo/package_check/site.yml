@@ -1,0 +1,12 @@
+---
+  - name: check jps
+    hosts: hadoop1
+    tasks:
+      - name: run jps
+        command: jps
+        register: jps_result
+
+      - name: check jps
+        debug:
+          var: jps_result.stdout_lines
+
